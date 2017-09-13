@@ -1,5 +1,7 @@
 package com.sun.chapterFive_String;
 
+import java.util.Date;
+
 import org.junit.Test;
 
 /**
@@ -267,6 +269,48 @@ public class StringDemo {
 	 */
 	@Test
 	public void test16() {
-		
+		//创建字符串
+		String str = "123.432.543.432.5342.234";
+		//按照'.'进行分割,使用转义字符\\
+		String[] split = str.split("\\.");
+		//遍历数组取值
+		for (String s : split) {
+			System.out.println(s);
+		}
+		System.out.println("-----------------------");
+		//按照"."进行分割,限制分割2次,使用转义字符\\
+		String[] split2 = str.split("\\.", 2);
+		//遍历数组取值
+		for (String s : split2) {
+			System.out.println(s);
+		}
 	}
+	
+	/**
+	 * 格式化字符串
+	 * str.format(String format,Object...args)
+	 * 
+	 */
+	
+	/**
+	 * 日期和时间字符串格式化
+	 * format()方法通过给定的特殊转换符作为参数来实现对日期和时间的格式化
+	 */
+	//实现将当前日期信息以4位年份,月份全称,2位日期形式输出
+	@Test
+	public void test17() {
+		//创建Date对象
+		Date date = new Date();
+		//格式化4位年份
+		String year = String.format("%tY", date);
+		//格式化月份全称
+		String month = String.format("%tB", date);
+		//格式化2位日期形式输出
+		String newdate = String.format("%td", date);
+		System.out.println("今年是"+year+"年,"+"现在是"+month+newdate+"号");
+	}
+	
+	/**
+	 * 时间格式化
+	 */
 }
