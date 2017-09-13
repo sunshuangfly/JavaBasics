@@ -312,5 +312,34 @@ public class StringDemo {
 	
 	/**
 	 * 时间格式化
+	 * 使用format()方法不仅可以完成日期格式化,也可以实现时间的格式化
 	 */
+	//实现将当前时间信息以2位小时数,2位分钟数,2位秒数形式输出出来
+	@Test
+	public void test18() {
+		//创建Date对象
+		Date date = new Date();
+		String hour = String.format("%tH", date);
+		String minute = String.format("%tM", date);
+		String second = String.format("%tS", date);
+		System.out.println("现在是:"+hour+"时"+minute+"分"+second+"秒");
+	}
+	
+	/**
+	 * 格式化常见的日期时间组合
+	 */
+	@Test
+	public void test19() {
+		//创建Date对象
+		Date date = new Date();
+		//格式化4位年份 "年-月-日"
+		String year = String.format("%tF", date);
+		//格式化全部日期和时间
+		String time = String.format("%tc", date);
+		//格式化 时:分:秒 格式,24小时制
+		String time2 = String.format("%tT", date);
+		System.out.println("全部的时间是:"+time);
+		System.out.println("现在的年-月-日是:"+year);
+		System.out.println("现在的时:分:秒是:"+time2);
+	}
 }
