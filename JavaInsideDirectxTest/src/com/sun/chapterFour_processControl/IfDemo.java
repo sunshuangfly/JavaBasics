@@ -1,4 +1,7 @@
 package com.sun.chapterFour_processControl;
+
+import org.junit.Test;
+
 /**
  * 条件语句 : if
  * 语法:
@@ -66,5 +69,9 @@ public class IfDemo {
 		}else {
 			System.out.println("x的值小于等于0");
 		}
+	}
+	@Test
+	public void test1() {
+		System.out.println("你好");
 	}
 }
