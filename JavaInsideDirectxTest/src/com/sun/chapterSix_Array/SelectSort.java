@@ -40,6 +40,7 @@ public class SelectSort {
 			int temp = array[array.length-i];
 			array[array.length-i] = array[index];
 			array[index] = temp;
+			
 		}
 		print(array);
 	}
