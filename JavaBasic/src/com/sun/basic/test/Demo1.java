@@ -17,7 +17,8 @@ public class Demo1 {
 		int month = sc.nextInt();
 		//调用查询季节方法,返回对应季节
 		//printSeason(month);
-		print(month);
+		//print(month);
+		printSeason2(month);
 	}
 	
 	/**
@@ -85,6 +86,38 @@ public class Demo1 {
 
 		default:
 			System.out.println("您的输入有误");
+			break;
+		}
+	}
+	
+	/**
+	 * 通过case穿透原理,可以简化代码
+	 */
+	public static void printSeason2(int month) {
+		switch (month) {
+		case 12:
+		case 1:
+		case 2:
+			System.out.println("冬季");
+			break;
+		case 3:
+		case 4:
+		case 5:
+			System.out.println("冬季");
+			break;
+		case 6:
+		case 7:
+		case 8:
+			System.out.println("冬季");
+			break;
+		case 9:
+		case 10:
+		case 11:
+			System.out.println("冬季");
+			break;
+
+		default:
+			System.out.println("你的输入有误请重新输入");
 			break;
 		}
 	}
