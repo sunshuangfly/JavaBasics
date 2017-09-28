@@ -22,7 +22,7 @@ import java.io.IOException;
 public class FileWriterDemo4 {
 	public static void main(String[] args) throws IOException {
 		// 创建输出流对象,并将数据写入到文件末尾处,进行追加
-		FileWriter fw = new FileWriter("c.txt", true);
+		FileWriter fw = new FileWriter("c.txt", true);//默认是false,不追加
 
 		// 通过写方法写数据
 		for (int x = 0; x < 10; x++) {
