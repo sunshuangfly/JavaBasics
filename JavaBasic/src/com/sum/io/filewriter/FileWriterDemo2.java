@@ -1,4 +1,4 @@
-package com.sum.io;
+package com.sum.io.filewriter;
 
 import java.io.FileWriter;
 import java.io.IOException;
